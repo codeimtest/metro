@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>AZOT - Помощь</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="libs/select2/select2.min.css">
+
+	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
+	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+	<script src="libs/select2/select2.min.js" defer></script>
+
+	<script src="js/common.js" defer></script>
+
+
+</head>
+
+<body class="">
+
+
+<div class="app">
+	<header>
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col">
+					<div class="d-flex align-items-center">
+						<a href="/azot/frontpage.html" class="logo">
+							<svg width="168" height="47" viewBox="0 0 168 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M116.68 18.8731C119.163 17.2147 122.084 16.3267 125.074 16.3213C127.062 16.3176 129.031 16.7045 130.869 17.4599C132.707 18.2152 134.377 19.3241 135.785 20.7231C137.192 22.1221 138.308 23.7838 139.07 25.6131C139.832 27.4423 140.223 29.4032 140.223 31.3835C140.223 34.3614 139.337 37.2724 137.677 39.7488C136.016 42.2251 133.656 44.1557 130.895 45.2965C128.133 46.4374 125.094 46.7373 122.162 46.1583C119.229 45.5794 116.535 44.1475 114.419 42.0439C112.303 39.9401 110.86 37.2589 110.274 34.3389C109.687 31.4189 109.982 28.3913 111.123 25.6385C112.263 22.8858 114.197 20.5315 116.68 18.8731ZM122.482 35.247C123.249 35.7575 124.151 36.03 125.074 36.03C125.688 36.0362 126.298 35.9202 126.866 35.6889C127.435 35.4576 127.952 35.1155 128.386 34.6828C128.821 34.2501 129.164 33.7354 129.396 33.1689C129.629 32.6024 129.745 31.9954 129.739 31.3835C129.739 30.4645 129.465 29.5661 128.953 28.802C128.44 28.0379 127.712 27.4423 126.859 27.0906C126.007 26.7389 125.069 26.6469 124.164 26.8262C123.259 27.0055 122.428 27.448 121.775 28.0979C121.123 28.7477 120.679 29.5757 120.499 30.477C120.319 31.3783 120.411 32.3126 120.764 33.1617C121.117 34.0107 121.715 34.7364 122.482 35.247ZM108.261 45.5434H92.5475H81.4901L91.7161 26.9203H81.5548V17.2223H108.732L98.2378 35.8362H108.261V45.5434ZM141.045 17.2223V26.9203H149.257V45.5434H159.788V26.9203H168V17.2223H141.045ZM46 45.545L58.1012 17.2423H67.8283L79.9757 45.545H68.7059L65.6668 36.6935L62.6276 45.545H46ZM62.6276 27.842L59.5515 36.7027L65.6668 36.6843L62.6276 27.842Z" fill="white"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.3322L12.4167 1.10083C13.0484 0.376761 13.8755 0.000541572 14.8364 4.83381e-07C15.7974 -0.000491787 16.6247 0.375015 17.2572 1.09851L29.7001 15.3322V43.0684C29.7001 44.8968 28.2042 46.3925 26.376 46.3925H3.3241C1.49579 46.3925 0 44.8968 0 43.0684V15.3322ZM17.0949 3.96817C16.7682 3.04359 15.8866 2.38096 14.85 2.38096C13.8134 2.38096 12.9319 3.04359 12.6051 3.96817L11.1373 8.33791C10.8088 9.31579 12.4865 10.3447 13.9103 10.3447H15.7897C17.2136 10.3447 18.8911 9.31544 18.5628 8.33791L17.0949 3.96817ZM9.30357 27.3606H24.0802L23.7273 29.5456C23.6863 29.7551 23.5969 30.2936 23.487 30.956L23.487 30.9562C23.2251 32.5345 22.8464 34.8165 22.7267 35.0309C22.5945 35.2674 22.2512 35.4821 21.8806 35.4821H12.2363C11.4254 35.4821 11.271 34.797 11.1296 34.1698L11.1296 34.1697C11.1081 34.0746 11.087 33.9808 11.0639 33.891C10.9972 33.631 10.7881 32.8765 10.5361 31.9673L10.536 31.9669L10.5359 31.9665C10.0264 30.1281 9.34165 27.6574 9.30357 27.3606ZM2.64842 20.0288C2.64842 21.1045 3.43244 21.0744 4.20488 21.0448C4.51984 21.0327 4.83288 21.0208 5.09005 21.0838C5.34251 21.1457 5.42474 21.2306 5.57029 21.3932C5.69924 21.5372 5.74531 21.697 5.80469 21.9031C5.81205 21.9286 5.81962 21.9549 5.82757 21.9819C6.26456 23.4672 6.6807 25.0125 7.09509 26.5514C7.50491 28.0733 7.91301 29.5888 8.33785 31.0335C8.46918 31.4799 8.58647 31.9181 8.70434 32.3585C8.81738 32.7809 8.93097 33.2053 9.05801 33.6409C9.1093 33.8168 9.16173 34.0137 9.21646 34.2193C9.39739 34.8989 9.60344 35.6729 9.87679 36.0932C10.2461 36.6611 11.086 37.2868 12.0107 37.2868H22.1062C22.6172 37.2868 23.1107 37.0313 23.4381 36.814C24.3417 36.2142 24.4932 35.4413 24.6723 34.5275C24.6832 34.4719 24.6942 34.4157 24.7055 34.359L25.8523 28.0612C25.8831 27.8976 25.918 27.7366 25.952 27.5799L25.952 27.5798L25.952 27.5798L25.9521 27.5797C26.1326 26.7476 26.2875 26.034 25.6613 25.6667C25.366 25.4935 23.7252 25.529 22.8451 25.5481C22.6455 25.5524 22.485 25.5559 22.3882 25.5559H8.79593C8.6748 25.3035 8.48638 24.6032 8.26756 23.7899L8.26754 23.7898C7.91772 22.4896 7.49022 20.9007 7.13583 20.3916C6.88377 20.0294 6.54483 19.7229 6.14701 19.5193C5.51041 19.1938 4.79827 19.211 4.01523 19.2299H4.01521H4.0152H4.01518C3.82686 19.2344 3.63444 19.2391 3.43798 19.2391C3.08578 19.2391 2.64842 19.6766 2.64842 20.0288ZM14.2667 31.8725C13.8577 31.8725 13.4771 31.4814 13.4771 30.8574C13.4771 30.5052 13.9145 30.0677 14.2667 30.0677H19.9067C20.2589 30.0677 20.6962 30.5052 20.6962 30.8574C20.6962 31.4814 20.3156 31.8725 19.9067 31.8725H14.2667ZM12.5748 40.7836C12.5748 41.3783 12.6711 41.7437 13.0662 42.1533C14.2568 43.3877 16.1843 42.3711 16.1843 41.0655C16.1843 40.4797 16.1245 40.0705 15.6649 39.611C14.5523 38.4983 12.5748 39.2884 12.5748 40.7836ZM18.4805 42.1533C18.0853 41.7437 17.9891 41.3783 17.9891 40.7836C17.9891 39.2884 19.9665 38.4983 21.0793 39.611C21.5388 40.0705 21.5987 40.4797 21.5987 41.0655C21.5987 42.3711 19.671 43.3877 18.4805 42.1533Z" fill="white"/>
+								</svg>								
+						</a>
+						<div class="city_choice">
+							<div class="city_choice_current">Менделеевск</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row justify-content-center align-items-center">
+						<nav class="main-nav">
+							<ul>
+								<li>
+									<a href="/azot/catalog.html">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_1257_2888)">
+												<path d="M9 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V9C3 9.39782 3.15804 9.77936 3.43934 10.0607C3.72064 10.342 4.10218 10.5 4.5 10.5H9C9.39782 10.5 9.77936 10.342 10.0607 10.0607C10.342 9.77936 10.5 9.39782 10.5 9V4.5C10.5 4.10218 10.342 3.72064 10.0607 3.43934C9.77936 3.15804 9.39782 3 9 3ZM9 9H4.5V4.5H9V9Z" fill="#3C3C3C" />
+												<path d="M19.5 3H15C14.6022 3 14.2206 3.15804 13.9393 3.43934C13.658 3.72064 13.5 4.10218 13.5 4.5V9C13.5 9.39782 13.658 9.77936 13.9393 10.0607C14.2206 10.342 14.6022 10.5 15 10.5H19.5C19.8978 10.5 20.2794 10.342 20.5607 10.0607C20.842 9.77936 21 9.39782 21 9V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3ZM19.5 9H15V4.5H19.5V9Z" fill="#3C3C3C" />
+												<path d="M9 13.5H4.5C4.10218 13.5 3.72064 13.658 3.43934 13.9393C3.15804 14.2206 3 14.6022 3 15V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H9C9.39782 21 9.77936 20.842 10.0607 20.5607C10.342 20.2794 10.5 19.8978 10.5 19.5V15C10.5 14.6022 10.342 14.2206 10.0607 13.9393C9.77936 13.658 9.39782 13.5 9 13.5ZM9 19.5H4.5V15H9V19.5Z" fill="#3C3C3C" />
+												<path d="M19.5 13.5H15C14.6022 13.5 14.2206 13.658 13.9393 13.9393C13.658 14.2206 13.5 14.6022 13.5 15V19.5C13.5 19.8978 13.658 20.2794 13.9393 20.5607C14.2206 20.842 14.6022 21 15 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V15C21 14.6022 20.842 14.2206 20.5607 13.9393C20.2794 13.658 19.8978 13.5 19.5 13.5ZM19.5 19.5H15V15H19.5V19.5Z" fill="#3C3C3C" />
+											</g>
+											<defs>
+												<clipPath id="clip0_1257_2888">
+													<rect width="24" height="24" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+										<span>Каталог</span>
+									</a>
+								</li>
+								<li>
+									<a href="/azot/faq.html">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_1257_2896)">
+												<path d="M21.1695 17.1089C22.0419 15.5475 22.5 13.7886 22.5 11.9999C22.5 10.2113 22.0419 8.45242 21.1695 6.89094L21.3105 6.74995C21.5914 6.46845 21.7491 6.08704 21.7491 5.68941C21.7491 5.29177 21.5914 4.91037 21.3105 4.62887L19.3713 2.68937C19.0897 2.40859 18.7083 2.25091 18.3106 2.25091C17.913 2.25091 17.5315 2.40859 17.25 2.68937L17.1092 2.83C15.5476 1.95771 13.7888 1.49976 12.0001 1.49976C10.2114 1.49976 8.45253 1.95771 6.89097 2.83L6.74997 2.68937C6.46843 2.40851 6.08699 2.25078 5.68932 2.25078C5.29165 2.25078 4.91021 2.40851 4.62867 2.68937L2.68939 4.62887C2.40855 4.91037 2.25083 5.29177 2.25083 5.68941C2.25083 6.08704 2.40855 6.46845 2.68939 6.74995L2.83024 6.89057C1.95795 8.45222 1.5 10.2112 1.5 11.9999C1.5 13.7887 1.95795 15.5477 2.83024 17.1093L2.68939 17.2499C2.40855 17.5314 2.25083 17.9128 2.25083 18.3105C2.25083 18.7081 2.40855 19.0895 2.68939 19.371L4.62867 21.3105C4.91018 21.5914 5.29163 21.7492 5.68932 21.7492C6.08701 21.7492 6.46846 21.5914 6.74997 21.3105L6.89097 21.1695C8.45249 22.0419 10.2114 22.4999 12 22.4999C13.7887 22.5 15.5476 22.0421 17.1092 21.1699L17.25 21.3105C17.5315 21.5914 17.9129 21.7492 18.3106 21.7492C18.7083 21.7492 19.0898 21.5914 19.3713 21.3105L21.3105 19.371C21.5914 19.0895 21.7491 18.7081 21.7491 18.3105C21.7491 17.9128 21.5914 17.5314 21.3105 17.2499L21.1695 17.1089ZM21 11.9999C20.9995 13.3876 20.6774 14.7563 20.059 15.9986L17.1379 13.0773C17.2873 12.3668 17.2873 11.6331 17.1379 10.9226L20.059 8.00132C20.6774 9.24359 20.9995 10.6123 21 11.9999ZM20.25 5.68937L16.549 9.39032C16.0847 8.58441 15.4158 7.91539 14.61 7.45089L18.3107 3.74995L20.25 5.68937ZM12 15.7499C11.2583 15.7499 10.5333 15.53 9.91658 15.118C9.2999 14.7059 8.81925 14.1202 8.53542 13.435C8.25159 12.7498 8.17733 11.9958 8.32202 11.2684C8.46672 10.5409 8.82387 9.87274 9.34832 9.34829C9.87276 8.82385 10.541 8.46669 11.2684 8.322C11.9958 8.1773 12.7498 8.25157 13.435 8.5354C14.1203 8.81922 14.7059 9.29987 15.118 9.91656C15.53 10.5332 15.75 11.2583 15.75 11.9999C15.7488 12.9942 15.3534 13.9473 14.6504 14.6503C13.9474 15.3534 12.9942 15.7488 12 15.7499ZM15.9865 3.95282L13.0773 6.86199C12.3669 6.7126 11.6331 6.7126 10.9226 6.86199L8.01342 3.95282C9.25702 3.35379 10.6196 3.04272 12 3.04272C13.3803 3.04272 14.7429 3.35379 15.9865 3.95282ZM5.68939 3.74995L9.39034 7.45089C8.58442 7.91538 7.9154 8.5844 7.45092 9.39032L3.74997 5.68937L5.68939 3.74995ZM2.99997 11.9999C3.00045 10.6124 3.32253 9.24378 3.94092 8.00162L6.86202 10.9226C6.71262 11.6331 6.71262 12.3668 6.86202 13.0773L3.94092 15.9983C3.32253 14.7561 3.00045 13.3875 2.99997 11.9999ZM5.68924 20.2499L3.74997 18.3105L7.45092 14.6099C7.91536 15.4159 8.58439 16.0849 9.39034 16.5494L5.68924 20.2499ZM8.01342 20.0474L10.9226 17.1383C11.6331 17.2877 12.3669 17.2877 13.0773 17.1383L15.9865 20.0474C14.7429 20.6465 13.3803 20.9575 12 20.9575C10.6196 20.9575 9.25702 20.6465 8.01342 20.0474ZM18.3109 20.2499L14.61 16.549C15.4157 16.0846 16.0846 15.4157 16.549 14.6099L20.25 18.3105L18.3109 20.2499Z" fill="#3C3C3C" />
+											</g>
+											<defs>
+												<clipPath id="clip0_1257_2896">
+													<rect width="24" height="24" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+										<span>Помощь</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col">
+					<div class="d-flex align-items-center justify-content-end">
+						<!-- <a href="#" class="btn">Вернуться на главную</a> -->
+						<div class="btn-group">
+							<a href="/azot/index.html" class="btn btn-transparent btn-text">Войти</a>
+							<a href="/azot/index.html" class="btn btn-accent">Зарегистрироваться</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<ul class="breadcrumbs">
+						<li>Главная</li>
+						<li class="current">Помощь</li>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="page_content">
+						<h1 class="section-title mb-4">Помощь</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-12">
+					<div class="faq_widget">
+						<div class="faq_widget_item">
+							<div class="three">КТО МОЖЕТ ЗАРЕГИСТРИРОВАТЬСЯ В МАРКЕТЕ?</div>
+							<div class="small">
+								Зарегистрировать на сайте может любая фирма, имеющая статус юридического лица или ИП
+							</div>
+						</div>
+						<div class="faq_widget_item">
+							<div class="three">Какие документы необходимы для заключения договора?</div>
+							<div class="small">
+								Для Юридического лица (АО, ООО, ПАО и пр.):
+								<ol>
+									<li>Карта партнера;</li>
+									<li>устав предприятия (полный)</li>
+									<li>свидетельство о внесении записи в Единый государственный реестр</li>
+									<li>свидетельство о постановке на учет в налоговом органе</li>
+									<li>протокол общего собрания о назначении руководителя;</li>
+									<li>протокола либо решение о назначении руководителя;</li>
+									<li>отчет о финрезультатах и квитанции о получении налоговой бухотчетности;</li>
+									<li>титульный лист РСВ (расчеты по страховым взносам) за последний отчетный период.</li>
+								</ul>
+								Для КФХ и ИП:
+								<ol>
+									<li>Карта партнера;</li>
+									<li>выписка из ЕГРИП;</li>
+									<li>свидетельство о постановке на учет в налоговом органе;</li>
+									<li>уведомление о постановке на учет ФЛ в налоговом органе;</li>
+									<li>титульный лист РСВ (расчет по страховым взносам) за последний период).</li>
+								</ol>
+							</div>
+						</div>
+						<div class="faq_widget_item">
+							<div class="three">Способы доставки</div>
+							<div class="small">
+								<ol>
+									<li>Самовывоз;</li>
+									<li>Доставка ЖД транспортом;</li>
+									<li>Доставка автотранспортом.</li>
+								</ol>
+							</div>
+						</div>
+						<div class="faq_widget_item">
+							<div class="three">ГДЕ НАХОДИТСЯ ПРОИЗВОДСТВО?</div>
+							<div class="small">
+								<ol>
+									<li>АО «Аммоний». Адрес производства: Россия, Республика Татарстан, г. Менделеевск, Промзона. Сайт производителя - https://ammoni.ru/</li>
+									<li>АО «Мелеузовские минеральные удобрения». Адрес производства: Россия, Республика Башкортостан, г. Мелеуз, площадь Химзавода. Сайт производителя - https://oaommu.ru/</li>
+									<li>КАО «Азот». Адрес производства: Россия, Кемеровская область, г. Кемерово, ул. Грузовая, стр. 1. Сайт производителя - https://www.kem-azot.ru/</li>
+								</ol>
+							</div>
+						</div>
+						<div class="faq_widget_item">
+							<div class="three">КАКОЙ МИНИМАЛЬНЫЙ ОБЪЕМ ЗАКАЗА?</div>
+							<div class="small">
+								Минимальный объем заказа при самовывозе – 50кг, при выборе способа доставки ЖД транспортом – вагонная партия.
+							</div>
+						</div>
+						<div class="faq_widget_item">
+							<div class="three">МОГУ Я ПОКУПАТЬ ОТ РАЗНЫХ ЮР.ЛИЦ?</div>
+							<div class="small">
+								Да, покупка от разных юридических лиц возможна, для этого необходимо пройти процедуру <a href="/azot/index.html">регистрации</a> и <a href="/azot/verification.html">верификации</a>
+							</div>
+						</div>
+						<div class="faq_widget_item">
+							<div class="three">Как рассчитывается стоимость?</div>
+							<div class="small">
+								Цена продукции зависит от пункта назначения доставки продукции, его базовой цены. Итоговую стоимость вы можете узнать, отправив заявку через личный кабинет.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="main_widget contact_widget mt-5">
+						<div class="two mb-4">Возникли вопросы? Напишите нам!</div>
+						<form action="">
+							<div class="form-group form-group-row d-flex align-items-center">
+								<div class="form-group">
+									<label for="fname">ФИО</label>
+									<input type="text" id="fname">
+								</div>
+								<div class="form-group">
+									<label for="fphone">Номер телефона</label>
+									<input type="text" id="fphone" class="phone">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="fcomment">Сообщение (необязательно)</label>
+								<textarea name="" id="fcomment" cols="30" rows="5" placeholder="Напишите свой вопрос"></textarea>
+							</div>
+							<div class="d-flex align-items-center mt-4">
+								<button class="btn btn-accent">Отправить</button>
+								<p class="mb-0 ml-2">Отправляя данную форму вы соглашаетесь с политикой конфиденциальности</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="white">
+						<a href="/azot/index.html" class="logo">
+							<img src="images/logo-white.svg" loading="lazy">
+						</a>
+						<nav class="social d-flex align-items-center justify-content-start">
+							<a href="#">
+								<img src="images/icons/vk.svg" loading="lazy">
+							</a>
+						</nav>
+						<div class="copyright small">© 2007-2023 АО ГК «Азот»</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Каталог</div>
+						<nav>
+							<ul>
+								<li><a href="/azot/product.html">Селитра амиачная</a></li>
+								<li><a href="/azot/product.html">Карбамид</a></li>
+								<li><a href="/azot/product.html">Смесь карбамидно-аммиачная КАС-32</a></li>
+								<li><a href="/azot/product.html">Сульфат аммония</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Информация</div>
+						<nav>
+							<ul>
+								<li><a href="/azot/faq.html">Помощь</a></li>
+								<li><a href="/azot/privacy.html">Политика конфиденциальности</a></li>
+								<li><a href="/azot/agreement.html">Пользовательское соглашение</a></li>
+								<li><a href="#">География работы</a></li>
+								<li><a href="#">Новости и обновления</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="f_widget white">
+						<div class="bold">Личный кабинет</div>
+						<nav>
+							<ul>
+								<li><a href="/azot/applications.html">Заявки</a></li>
+								<li><a href="/azot/profile.html">Профиль компании</a></li>
+								<li><a href="/azot/history.html">История заказов</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="popup for-profile">
+		<div class="popup-dialog">
+			<div class="popup-wrap">
+				<div class="btn-close close">
+					<img src="images/cancel.svg">
+				</div>
+				<div class="two mb-4">Оформление заявки</div>
+				<form action="">
+					<div class="form-group">
+						<label for="product_send">Выберите продукцию</label>
+						<select name="" id="product_send" class="js-select-single">
+							<option value="Селитра аммиачная марки Б - АО “Аммоний”">Селитра аммиачная марки Б - АО “Аммоний”</option>
+							<option value="">Карбамид марка Б</option>
+											<option value="">Смесь карбамидно-аммиачная КАС-32</option>
+											<option value="">Сульфат аммония</option>
+						</select>
+					</div>
+					<div class="form-group form-group-row d-flex align-items-center">
+						<div class="form-group">
+							<label for="">Объем, Т</label>
+							<div class="count_block">
+								<div class="minus">-</div>
+								<input type="number" value="100" min="10" max="1000" step="100">
+								<div class="plus">+</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="product_send">Поставщик</label>
+							<select name="" id="product_company" class="js-select-single">
+								<option value="Селитра аммиачная марки Б - АО “Аммоний”">ООО «Аммоний-Агро»</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">Предпочтительные варианты упаковки</label>
+						<div class="checkbox_wrap">
+							<label class="checkbox">
+								<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+								<span>МКР</span>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox_wrap">
+							<label class="checkbox">
+								<input type="checkbox" checked="" name="policy_check" id="policy_check" wfd-id="id12">
+								<span>Мешки 50 кг</span>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<hr>
+					<div class="four mb-3 mt-4 text-normal">Способы доставки</div>
+					<div class="form-group select-group d-flex">
+						<select name="" id="" class="js-select-single">
+							<option value="">ЖД транспорт</option>
+						</select>
+						<select name="" id="" class="js-select-single">
+							<option value="">Москва-3</option>
+						</select>
+					</div>
+					<div class="link_accent mt-3 mb-4">Добавить пункт выгрузки</div>
+					<hr>
+					<div class="four mb-3 mt-4 text-normal">Срок поставки</div>
+					<div>
+						<input type="hidden" name="company_type" value="Юридическое лицо">
+							<div class="d-flex justify-content-between">
+								<div class="choice_button choice_accent active">
+									<label for="company_choice1">До фиксированной даты</label>
+									<input type="radio" checked  name="company_item" value="Юридическое лицо" id="company_choice1">
+								</div>
+								<div class="choice_button choice_accent ">
+									<label for="company_choice2" name="company">Период поставки </label>
+									<input type="radio"   name="company_item" value="Индивидуальный предприниматель" id="company_choice2">
+								</div>
+							</div>
+					</div>
+					<div class="form-group mt-2">
+						<input type="date" name="" id="">
+					</div>
+					<div class="d-flex justify-content-end mt-4">
+						<div class="btn btn-accent to-application-send">Отправить заявку</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup for-application">
+		<div class="popup-dialog">
+			<div class="popup-wrap">
+				<div class="btn-close close">
+					<img src="images/cancel.svg">
+				</div>
+				<div class="three mb-3">Ваша заявка №123123 успешно создана</div>
+				<p>Наш менеджер свяжется с вами в ближайшее время. Отслеживайте статус заявки в личном кабинете.</p>
+				<div class="application_total_list">
+					<div class="application_total_list_item d-flex align-items-center">
+						<img src="images/image.jpg" loading="lazy">
+						<div>
+							<div class="three text-normal mb-2">Селитра аммиачная марки Б, высший сорт ГОСТ 2-2013</div>
+							<div class="d-flex align-items-center">
+								<div>
+									<div class="less light">Вы выбрали</div>
+									<div>1 000 T</div>
+								</div>
+								<div class="ml-2">
+									<div class="less light">Поставщик</div>
+									<div>ООО "Аммоний-Агро"</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
