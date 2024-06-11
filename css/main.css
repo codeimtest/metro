@@ -38,6 +38,9 @@ label{
 html,body{
 	height: 100%;
 }
+.text-center{
+	text-align: center;
+}
 body {
 	font-family: var(--userfont);
 	font-size: var(--regular-text);
@@ -495,7 +498,9 @@ header .header-widget .menu_toggle {
 }
 .map img{
 	width: 100%;
-	max-width: 770px;
+	max-width: 800px;
+	margin: 0 auto;
+	display: block;
 }
 .banner_service{
 	background: #fff;
@@ -544,13 +549,45 @@ header .header-widget .menu_toggle {
 	padding-top: 20px;
 }
 /* City choice */
-.contact_header{
+.city_choice ul {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	position: absolute;
+	display: none;
+}
+.city_choice::after{
+	content: '';
+	position: absolute;
+	right: 14px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url('../images/angle-down.svg') no-repeat center right;
+	width: 20px;
+	height: 10px;
+	transition: var(--transition)
+}
+.city_choice.active::after{
+	transform: rotate(180deg);
+}
+.city_choice ul li a{
+	font-weight: normal;
+	padding-top: 6px;
+	display: block;
+}
+.contact_header,.city_choice{
 	position: relative;
 	margin-left: 48px;
 	padding: 4px 48px;
 	color: var(--text);
+	cursor: pointer;
 }
-.contact_header a{
+.contact_header{
+	margin-left: 0;
+	margin-right: 48px;
+}
+.contact_header a,.city_choice a{
 	color: #fff;
 	text-decoration: none;
 	font-weight: 600;
@@ -560,7 +597,7 @@ header .header-widget .menu_toggle {
 	text-decoration: underline;
 	font-size: 14px;
 }
-.contact_header::before{
+.contact_header::before,.city_choice::before{
 	content: '';
 	position: absolute;
 	left: 0;
@@ -571,25 +608,9 @@ header .header-widget .menu_toggle {
 	height: 100%;
 	width: 1px;
 }
-.city_choice .city_choice_current{
-	color: var(--text);
-	text-decoration: underline;
-	position: relative;
-	padding-left: 30px;
-	margin-left: 16px;
-	cursor: pointer;
-	font-size: 14px;
-}
-.city_choice .city_choice_current::before{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	width: 24px;
-	height: 24px;
-	background: url('../images/icons/location.svg') no-repeat left center;
+.contact_header::before{
+	right: 0;
+	left: auto;
 }
 .main_widget{
 	background: #fff;
@@ -1832,6 +1853,12 @@ input[type="checkbox"]{
 	color: var(--text);
 	text-decoration: none;
 }
+.catalog_item .small{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical; 
+}
 .catalog_item > img{
 	object-fit: cover;
 	height: 204px;
@@ -1844,7 +1871,7 @@ input[type="checkbox"]{
 	margin-right: 12px;
 }
 .catalog_item > .text{
-	min-height: 50px;
+	min-height: 25px;
 }
 /* catalog filter */
 .catalog_filters > * + *{

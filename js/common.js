@@ -1,3 +1,9 @@
+$('.city_choice').click(function(){
+	$(this).find('ul').slideToggle()
+	$(this).toggleClass('active')
+})
+
+//OTHER
 $('.form_toggle_widget div').click(function() {
 	// Сначала мы удаляем класс active у всех div внутри form_toggle_widget
 	$('.form_toggle_widget div').removeClass('active');
